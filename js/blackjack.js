@@ -43,9 +43,9 @@ newButton.addEventListener('click', function () {
 function createDeck() {
     let deck = [];
 
-    for (let suitsIdx = 0; suitsIdx < suits.length; suitsIdx++) {
-        for (let valuesIdx = 0; valuesIdx < values.length; valuesIdx++) {
-            let card = {suit: suits[suitsIdx], value: values[valuesIdx]};
+    for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
+        for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
+            let card = {suit: suits[suitIdx], value: values[valueIdx]};
             deck.push(card);
         }
     }
@@ -61,7 +61,7 @@ function getNextCard() {
 
 }
 function shuffleDeck(deck) {
-    for (let i=0; i<=deck.length; i++) { // every card in the deck
+    for (let i=0; i<deck.length; i++) { // every card in the deck
         let swapIdx = Math.trunc(Math.random() * deck.length); // calc the index of the card that we can swap with
         let tmp = deck[swapIdx];  // in tmp
         deck[swapIdx] = deck[i]; // swapping deck [i] with deck swapIndex
